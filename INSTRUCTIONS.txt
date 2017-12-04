@@ -1,0 +1,2 @@
+Open index.html and run DevTools (right click and then inspect). Look at the top tabs and go to the
+tab "Console". This is where everything will be logged (i.e. function usage, answers, etc.)

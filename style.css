@@ -1,0 +1,43 @@
+* {
+  text-decoration: none;
+}
+
+body {
+  background-color: #2b2b2b;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  text-align: center;
+  color: red;
+}
+
+a {
+  transition: 0.2s ease-in-out;
+  color: red;
+  border: 1px red solid;
+}
+
+a:hover {
+  border-color: DarkRed;
+  color: DarkRed;
+}
+
+h1, ul {
+  text-align: center;
+  color: #FFF;
+  font-family: Calibri;
+  list-style: none;
+}
+
+ul li {
+  font-size: 25px;
+  padding: 20px;
+}
+
+.break {
+  font-size: 40px;
+}
