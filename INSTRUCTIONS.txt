@@ -1,2 +1,8 @@
 Open index.html and run DevTools (right click and then inspect). Look at the top tabs and go to the
 tab "Console". This is where everything will be logged (i.e. function usage, answers, etc.)
+
+If you can't inspect element to open the console, go to this website and use IT'S JavaScript and Console. (If my JavaScript source isn't already
+in the JavaScript section, just be sure to paste it into there by copying and pasting the text on the page that you clicked "HERE" for
+that said "For JavaScript Source, click [HERE] )
+
+https://jsbin.com/kosegagawi/edit?js,console
