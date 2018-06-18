@@ -7,21 +7,42 @@
   </head>
   <link rel="shortcut icon" href="triangle.png">
   <body>
-    <h1>This is a simple Pythagorean therom calculator. Use the console to execute these functions:</h1>
+    <h1>This is a simple Geometry calculator. Use the console to execute these functions:</h1>
     <p>For instructions, click <a href="INSTRUCTIONS.txt">HERE</a></p>
     <p>For JavaScript source, click <a href="js/functions.js">HERE</a></p>
     <ul>
-      <li><strong>getHypotenuse(a, b)</strong>; // input the value of the A and B legs to get the length of leg C.</li>
-      <li><strong>getMissingLeg(b, c)</strong>; // input the value of the B (or A) and C legs to get the length of leg A (or B).</li>
-      <li><strong>getRelation(a, b, c)</strong>; // states whether the triangle is obtuse, acute, or right based on the side lengths given to the function.</li>
-      <li><strong>firstLine()</strong>; // logs the pre-loaded line to the console that states the available functions</li>
-      <li><strong>radical(a, b)</strong> // gets the final value of a complex radical
-      <li>(Tip: if a side length is a radical, use "(# ** 0.5)" as that value and whatever number is in the radical replaces the '#' sign)</li>
-      <li class="break"><strong><br /><br />Have a complex radical and already have the squared numbers?</strong></li>
-      <li><strong>getHsquared(a, b)</strong> // gets the hypotenuse with the already-squared numbers</li>
-      <li><strong>getMLsquared(b, c)</strong> // gets the missing leg with the already-squared numbers</li>
-      <li><strong>getRsquared(a, b, c)</strong> // gets the relationship of the triangle with the already-squared numbers</li>
+      <li><strong>Find Hypotenuse</strong><br /><span class="description">Input the value of the A and B legs to get the length of leg C.</span><br /><button class="toggleExamples">Show / Hide</button><br /><span class="syntax">Syntax: getHypotenuse(a, b);</span><br />
+      <div class="example-code"> —Example— <br />
+      getHypotenuse(3, 4);</br />Output: 5</div></li>
+
+      <li><strong>Find Missing Leg</strong><br /><span class="description">Input the value of the B (or A) and C legs to get the length of leg A (or B).</span><br /><button class="toggleExamples">Show / Hide</button><br /><span class="syntax">Syntax: getMissingLeg(b, c);</span><br />
+      <div class="example-code"> —Example— <br />
+      getMissingLeg(4, 5);</br />Output: 3</div></li>
+
+      <li><strong>Triangle Identification</strong><br /><span class="description">States whether the triangle is obtuse, acute, or right based on the side lengths given to the function.</span><br /><button class="toggleExamples">Show / Hide</button><br /><span class="syntax">Syntax: getRelation(a, b, c);</span><br />
+      <div class="example-code"> —Example— <br />
+      getRelation(3, 4, 5);</br />Output: "Right"</div></li>
+
+      <li><strong>Solve a (Complex) Radical</strong><br /><span class="description">Gets the final value of a complex radical.</span><br /><button class="toggleExamples">Show / Hide</button><br /><span class="syntax">Syntax: radical(a, b);</span><br />
+      <div class="example-code"> —Example— <br />
+      radical(2, 2);</br />Output: 8</div></li>
+
+      <li class="break"><strong><br /><br />— Start of Complex Functions —</strong></li>
+
+      <li><strong>Trigonometry</strong><br /><span class="description">Solves for 'x' input value using trig. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br /><span class="syntax">Syntax: Trig(theta, angle2, opposite, adjacent, hypotenuse);</span><br />
+      <div class="example-code"> —Example— <br /> <br /><img src="triangle.1" class="exampleTriangle"></img><br />You would write this as:</em><br />
+      Trig(5, null, 2, 'x', null);</div></li>
+
+      <li><strong>Solving a Trapezoid</strong><br /><span class="description">Solves for 'x' input value using area formulas. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br /><span class="syntax">Syntax: Trapezoid(a, b1, b2, h);</span><br />
+      <div class="example-code"> —Example— <br />
+      Trapezoid(a, b1, b2, h);</br />Output: 5</div></li>
     </ul>
+      <!--
+      <li><strong>Trig(theta, angle2, opposite, adjacent, hypotenuse)</strong> // input the values of a triangle (making sure that you identify each correctly) and the function does the rest for you. If a side or angle of a trianlge does not have a value, type "null". If it is x, make sure you type " 'x' " (make sure it is in the single quotes).<br /><br /><em>For Example:<br /><img src="triangle.1" class="exampleTriangle"></img><br /> you would write this as: Trig(5, null, 2, 'x', null);</em></li>
+    </ul>
+  -->
     <script src="js/functions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
