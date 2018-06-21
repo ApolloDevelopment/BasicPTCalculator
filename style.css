@@ -47,24 +47,15 @@ span.description {
   font-size: 20px;
 }
 
-.syntax {
-  font-size: 13px;
-  font-style: italic;
-  line-height: 10px;
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
 .toggleExamples {
   vertical-align: middle;
   text-align: center;
   padding: 5px;
-  background-color: #1A1A1A;
+  background-color: #7A7A7A;
   color: #F7F7F7;
   border: 1px lightGrey solid;
+  border-radius: 5px;
   cursor: pointer;
-  margin-left: 5px;
 }
 
 .example-code {
@@ -78,6 +69,46 @@ span.description {
   border: 1px lightGrey solid;
 }
 
+.example-code p.answer {
+  font-family: Calibri;
+  color: #FFF;
+  font-size: 1.4em;
+  display: none;
+  margin-top: -5px;
+}
+
+input.input {
+  background-color: #1A1A1A;
+  color: #F7F7F7;
+  font-family: Calibri;
+  font-size: 1.5em;
+  padding: 5px;
+  margin: 5px;
+  border: 2px #FFF solid;
+}
+
+div.submit {
+  cursor: pointer;
+  border: 1px white solid;
+  border-radius: 5px;
+  text-align: center;
+  color: #FFF;
+  background-color: #1A1A1A;
+  font-family: Calibri;
+  font-size: 1.5em;
+  padding: 5px;
+  margin-top: 5px;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 0;
+  transition: 0.3s ease;
+  width: 60%;
+}
+
+div.submit:hover {
+  background-color: darkGrey;
+}
+
 .break {
   font-size: 35px;
 }
@@ -85,4 +116,56 @@ span.description {
 .exampleTriangle {
   width: 200px;
   height: 62px;
+}
+
+.active {
+  background-color: #1A1A1A;
+}
+
+@media only screen and (max-width: 664px) {
+  p.red-text {
+    display: none;
+  }
+
+  ul li {
+    font-size: 2.4em;
+  }
+
+  .break {
+    font-size: 2.2em;
+  }
+
+  span.description {
+    font-size: 0.75em;
+  }
+
+  button.toggleExamples {
+    font-size: 0.75em;
+  }
+
+  div.example-code {
+    font-size: 0.75em;
+  }
+
+  div.submit, input.input, p.answer {
+    font-size: 1em;
+  }
+
+  p.answer{
+    padding: 10px;
+  }
+}
+
+
+
+/* start of responsive design for use on mobile devices (mainly phones) */
+@media only screen and (max-width: 575px) {
+
+  h1 {
+    font-size: 4em;
+    border-bottom: 1px #FFF solid;
+    background-color: #212121;
+    padding: 0.7em;
+  }
+
 }

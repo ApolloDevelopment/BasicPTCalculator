@@ -25,42 +25,64 @@ var ans = Math.sqrt(leg);
                               newer programmers to understand and learn from.
 */
 function getHypotenuse(a, b) {
+  a = document.getElementById('getHypotenuse_a').value;
+  b = document.getElementById('getHypotenuse_b').value;
+  var ans_text = document.getElementById('hypotenuse-answer');
   var hyp = ((a *= a) + (b *= b));
   var ans = Math.sqrt(hyp);
-  return ans;
+  ans_text.innerHTML = "Hypotenuse: " + ans;
 }
 
 function getMissingLeg(b, c) {
+  b = document.getElementById('MissingLeg_b').value;
+  c = document.getElementById('MissingLeg_c').value;
+  var ans_text = document.getElementById('MissingLeg-answer');
   var leg = ((c *= c) - (b *= b));
   var ans = Math.sqrt(leg);
-  return ans;
+  ans_text.innerHTML = "Leg: " + ans;
 }
 
 function getRelation(a,b,c) {
+  a = document.getElementById('RelationLeg_a').value;
+  b = document.getElementById('RelationLeg_b').value;
+  c = document.getElementById('RelationLeg_c').value;
+  var ans_text = document.getElementById('Relation-answer');
   var relation;
   var relationC = (c *= c);
   var relationAB = ((a *= a) + (b *= b));
   if(relationC > relationAB) {
     relation = "Obtuse";
-    return relation;
+    ans_text.innerHTML = relation + " Triangle";
   } else if(relationC < relationAB) {
     relation = "Acute";
-    return relation;
-  } else {
+    ans_text.innerHTML = relation + " Triangle";
+  } else if (relationC == relationAB){
     relation = "Right";
-    return relation;
+    ans_text.innerHTML = relation + " Triangle";
   }
 }
 
 function radical(a, d) {
-  var answer;
-  var outside = (a *= a);
-  answer = (outside * d);
-  return answer;
+  a = document.getElementById('Radical_out').value;
+  d = document.getElementById('Radical_in').value;
+  var radical_text = document.getElementById('Radical-inside');
+  var decimal_text = document.getElementById('Radical-dec');
+  var inside = (a *= a) * d;
+  var decimal = Math.sqrt(inside);
+  radical_text.innerHTML = "Original Radical: ⎷" + inside;
+  decimal_text.innerHTML = "Decimal:<br /><br />" + decimal;
+  /*
+    radical symbol: ⎷
+  */
 }
 
 
 ///////if you have a complex radical and need to use the numbers squared////////
+
+/*
+// these functions serve no purpose, therefore,
+// they are not included with the functions
+// displayed on the website
 
 
 function getHsquared(a, b) {
@@ -90,7 +112,7 @@ function getRsquared(a,b,c) {
     return relation;
   }
 }
-
+*/
 
 
 
@@ -98,43 +120,63 @@ function getRsquared(a,b,c) {
 
 
 function Trig(theta, ang2, opp, adj, hyp) {
+  theta = document.getElementById('Trig_theta').value;
+  ang2 = document.getElementById('Trig_ang2').value;
+  opp = document.getElementById('Trig_opp').value;
+  adj = document.getElementById('Trig_adj').value;
+  hyp = document.getElementById('Trig_hyp').value;
+  var ans_text = document.getElementById('Trig-answer');
   var ans;
-  if(opp == 'x' && adj != null && hyp == null) {
+  if(opp == "x" && adj != "" && hyp == "") {
     ans = (Math.tan(theta)) * adj;
-    return "x = " +ans;
-  } else if(adj == 'x' && opp != null && hyp == null) {
+    ans_text.innerHTML = "x = " +ans;
+  } else if(adj == "x" && opp != "" && hyp == "") {
       ans = opp / (Math.tan(theta));
-      return "x = " +ans;
-  } else if(opp == 'x' && hyp != null && adj == null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(opp == "x" && hyp != "" && adj == "") {
       ans = (Math.sin(theta)) * hyp;
-      return "x = " +ans;
-  } else if(hyp == 'x' && opp != null && adj == null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(hyp == "x" && opp != "" && adj == "") {
       ans = opp / (Math.sin(theta));
-      return "x = " +ans;
-  } else if(adj == 'x' && hyp != null && opp == null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(adj == "x" && hyp != "" && opp == "") {
       ans = (Math.cos(theta)) * hyp;
-      return "x = " +ans;
-  } else if(hyp == 'x' && adj != null && opp == null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(hyp == "x" && adj != "" && opp == "") {
       ans = adj / (Math.cos(theta));
-      return "x = " +ans;
-  } else if(theta == 'x' && ang2 != null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(theta == "x" && ang2 != "") {
       ans =  180 - (ang2 + 90);
-      return "x = " +ans;
-  } else if(ang2 == 'x' && theta != null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(ang2 == "x" && theta != "") {
       ans = 180 - (theta + 90);
-      return "x = " +ans;
-  } else if(theta == 'x' && hyp != null && opp != null) {         //Multiply the result by 180/Math.PI to convert from radians to degrees.
+      ans_text.innerHTML = "x = " +ans;
+  } else if(theta == "x" && ang2 != "") {
+      ans = 180 - (90 + ang2);
+      ans_text.innerHTML = "x = "+ans;
+  } else if(theta == "x" && hyp != "" && opp != "") {         //Multiply the result by 180/Math.PI to convert from radians to degrees.
       ans = (Math.asin(opp / hyp)) * (180/Math.PI);
-      return "x = " +ans;
-  } else if(theta == 'x' && hyp != null && adj != null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(theta == "x" && hyp != "" && adj != "") {
       ans = (Math.acos(adj / hyp)) * (180/Math.PI);
-      return "x = " +ans;
-  } else if(theta == 'x' && opp != null && adj != null) {
+      ans_text.innerHTML = "x = " +ans;
+  } else if(theta == "x" && opp != "" && adj != "") {
       ans = (Math.atan(opp / adj)) * (180/Math.PI);
-      return "x = " +ans;
-  } else if(theta != 'x' && ang2 != 'x' && opp != 'x' && adj != 'x' && hyp != 'x') {
-      console.log("Please be sure to set one of the inputs to 'x' so the function can find the value of that variable.");
+      ans_text.innerHTML = "x = " +ans;
+  } else if(theta != "x" && ang2 != "x" && opp != "x" && adj != "x" && hyp != "x") {
+      ans_text.innerHTML = "Error: 1 value must be set to x";
   }
+  // if(theta == ""){
+  //   theta = null;
+  // } else if(ang2 == "") {
+  //   ang2 = null;
+  // } else if(opp == "") {
+  //   opp = null;
+  // } else if(adj == "") {
+  //   adj = null;
+  // } else if(hyp == "") {
+  //   hyp = null;
+  // }
 }
 
 
