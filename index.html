@@ -9,34 +9,38 @@
   <link rel="shortcut icon" href="triangle.png">
   <body>
     <h1>This is a simple Geometry cheat/helper developed entirely by <span class="name">Dalton Hatter<span></h1>
-    <p class="red-text">For instructions, click <a href="INSTRUCTIONS.txt">HERE</a></p>
-    <p class="red-text">For JavaScript source, click <a href="js/functions.js">HERE</a></p>
+    <p class="red-text">For instructions, click <a href="INSTRUCTIONS.txt">Here</a></p>
+    <p class="red-text">For JavaScript source, click <a href="js/functions.js">Here</a></p>
     <ul>
       <li><strong>Find Hypotenuse</strong><br /><span class="description">Input the value of the A and B legs to get the length of leg C.</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
-      <div class="example-code"> —Solve— <br />
-      <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Leg A" id="getHypotenuse_a"></br /><input class="input" type="number" placeholder="Leg B" id="getHypotenuse_b"><br /><div class="submit" onclick="getHypotenuse()">Solve</div><br /><p class="answer" id="hypotenuse-answer"></p></form></div></li>
+        <div class="example-code"> —Solve— <br />
+        <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Leg A" id="getHypotenuse_a"></br /><input class="input" type="number" placeholder="Leg B" id="getHypotenuse_b"><br /><div class="submit" onclick="getHypotenuse()">Solve</div><br /><p class="answer" id="hypotenuse-answer"></p></form></div></li>
 
       <li><strong>Find Missing Leg</strong><br /><span class="description">Input the value of the B (or A) and C legs to get the length of leg A (or B).</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
-      <div class="example-code"> —Solve— <br />
-      <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Leg A/B" id="MissingLeg_b"></br /><input class="input" type="number" placeholder="Hypotenuse" id="MissingLeg_c"><br /><div class="submit" onclick="getMissingLeg()">Solve</div><br /><p class="answer" id="MissingLeg-answer"></p></form></div></li>
+        <div class="example-code"> —Solve— <br />
+       <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Leg A/B" id="MissingLeg_b"></br /><input class="input" type="number" placeholder="Hypotenuse" id="MissingLeg_c"><br /><div class="submit" onclick="getMissingLeg()">Solve</div><br /><p class="answer" id="MissingLeg-answer"></p></form></div></li>
 
       <li><strong>Triangle Identification</strong><br /><span class="description">States whether the triangle is obtuse, acute, or right based on the side lengths given to the function.</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
-      <div class="example-code"> —Solve— <br />
-      <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Leg A" id="RelationLeg_a"></br /><input class="input" type="number" placeholder="Leg B" id="RelationLeg_b"><br /><input class="input" type="number" placeholder="Hypotenuse" id="RelationLeg_c"><br /><div class="submit" onclick="getRelation()">Solve</div><br /><p class="answer" id="Relation-answer"></p></form></div></li>
+       <div class="example-code"> —Solve— <br />
+        <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Leg A" id="RelationLeg_a"></br /><input class="input" type="number" placeholder="Leg B" id="RelationLeg_b"><br /><input class="input" type="number" placeholder="Hypotenuse" id="RelationLeg_c"><br /><div class="submit" onclick="getRelation()">Solve</div><br /><p class="answer" id="Relation-answer"></p></form></div></li>
 
-      <li><strong>Solve a (Complex) Radical</strong><br /><span class="description">Gets the final value of a complex radical.</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
-      <div class="example-code"> —Solve— <br />
-      <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Outside Number" id="Radical_out"></br /><input class="input" type="number" placeholder="Inside Number" id="Radical_in"><br /><div class="submit" onclick="radical()">Solve</div><br /><p class="answer" id="Radical-inside"></p><br /><p class="answer" id="Radical-dec"></p></form></div></li>
+      <li><strong>Simplify a Radical</strong><br /><span class="description">Simplifies a complex radical from its original value. (Use "Solving a Radical" to find the decimal value of the answer).</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
+        <div class="example-code"> —Solve— <br />
+        <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Number Under Radical" id="reverse-rad"></br /><div class="submit" onclick="reverse_radical()">Solve</div><br /><p class="answer" id="Reverse_radical_ans"></p></form></div></li>
+
+      <li><strong>Solving a Radical</strong><br /><span class="description">Gets the final value of a complex radical.</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
+        <div class="example-code"> —Solve— <br />
+        <form autocomplete="off" class="solve"><input class="input" type="number" placeholder="Outside Number" id="Radical_out"></br /><input class="input" type="number" placeholder="Inside Number" id="Radical_in"><br /><div class="submit" onclick="radical()">Solve</div><br /><p class="answer" id="Radical-inside"></p><br /><p class="answer" id="Radical-dec"></p></form></div></li>
 
       <li class="break"><strong><br /><br />— Start of Complex Functions —</strong></li>
 
       <li><strong>Trigonometry</strong><br /><span class="description">Solves for 'x' input value using trig. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
-      <div class="example-code"> —Solve— <br />
-      <form autocomplete="off" class="solve"><input class="input" type="text" placeholder="Theta" id="Trig_theta"></br /><input class="input" type="text" placeholder="Other Angle" id="Trig_ang2"><br /><input class="input" type="text" placeholder="Opposite" id="Trig_opp"><br /><input class="input" type="text" placeholder="Adjacent" id="Trig_adj"><br /><input class="input" type="text" placeholder="Hypotenuse" id="Trig_hyp"><br /><div class="submit" onclick="Trig()">Solve</div><br /><p class="answer" id="Trig-answer"></p></form></div></li>
+        <div class="example-code"> —Solve— <br />
+        <form autocomplete="off" class="solve"><input class="input" type="text" placeholder="Theta" id="Trig_theta"></br /><input class="input" type="text" placeholder="Other Angle" id="Trig_ang2"><br /><input class="input" type="text" placeholder="Opposite" id="Trig_opp"><br /><input class="input" type="text" placeholder="Adjacent" id="Trig_adj"><br /><input class="input" type="text" placeholder="Hypotenuse" id="Trig_hyp"><br /><div class="submit" onclick="Trig()">Solve</div><br /><p class="answer" id="Trig-answer"></p></form></div></li>
 
-      <li><strong>Solving a Trapezoid</strong><br /><span class="description">Solves for 'x' input value using area formulas. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br />
-      <div class="example-code"> —Example— <br />
-      Trapezoid(a, b1, b2, h);</br />Output: 5</div></li>
+      <!-- <li><strong>Solving a Trapezoid</strong><br /><span class="description">Solves for 'x' input value using area formulas. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br />
+        <div class="example-code"> —Example— <br />
+        Trapezoid(a, b1, b2, h);</br />Output: 5</div></li> -->
     </ul>
       <!--
       <li><strong>Trig(theta, angle2, opposite, adjacent, hypotenuse)</strong> // input the values of a triangle (making sure that you identify each correctly) and the function does the rest for you. If a side or angle of a trianlge does not have a value, type "null". If it is x, make sure you type " 'x' " (make sure it is in the single quotes).<br /><br /><em>For Example:<br /><img src="triangle.1" class="exampleTriangle"></img><br /> you would write this as: Trig(5, null, 2, 'x', null);</em></li>

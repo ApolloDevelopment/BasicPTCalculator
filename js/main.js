@@ -3,7 +3,7 @@ $(document).ready(() => {
   $('.toggleExamples').on('click', function () {
     $(this).siblings('div').slideToggle(150);
     $(this).siblings().children().find('p').fadeOut('fast');
-    $(this).toggleClass('active');
+    //$(this).toggleClass('active');
   })
 
 

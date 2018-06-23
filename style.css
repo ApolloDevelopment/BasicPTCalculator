@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #2b2b2b;
+  /* background-color: #2b2b2b; */
+  background: linear-gradient(70deg, rgba(10,210,238,1) 0%, rgba(2,97,179,1) 100%);
 }
 
 h1 {
@@ -14,27 +15,27 @@ h1 {
 
 p {
   text-align: center;
-  color: red;
+  color: #f4f4f4;
   margin: 5px;
 }
 
 a {
   transition: 0.2s ease-in-out;
-  color: red;
-  border: 1px red solid;
+  color: blue;
   margin: 5px;
-}
-
-a:hover {
-  border-color: DarkRed;
-  color: DarkRed;
+  text-decoration: underline;
 }
 
 h1, ul {
   text-align: center;
-  color: #FFF;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 1px #212121;
   font-family: Arial, sans-serif;
   list-style: none;
+}
+
+h1 {
+  color: #f4f4f4;
 }
 
 ul li {
@@ -51,15 +52,15 @@ span.description {
   vertical-align: middle;
   text-align: center;
   padding: 5px;
-  background-color: #7A7A7A;
+  background: linear-gradient(0deg, rgba(0,5,247,1) 0%, rgba(0,108,212,1) 100%);
   color: #F7F7F7;
-  border: 1px lightGrey solid;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .example-code {
-  background-color: #1A1A1A;
+  background-color: #202020;
   font-size: 17.5px;
   font-family: Calibri, sans-serif;
   color: #F7F7F7;
@@ -70,15 +71,16 @@ span.description {
 }
 
 .example-code p.answer {
-  font-family: Calibri;
+  font-family: Consolas, sans-serif;
   color: #FFF;
   font-size: 1.4em;
   display: none;
   margin-top: -5px;
+  line-height: 1em;
 }
 
 input.input {
-  background-color: #1A1A1A;
+  background-color: #202020;
   color: #F7F7F7;
   font-family: Calibri, sans-serif;
   font-size: 1.5em;
@@ -89,11 +91,11 @@ input.input {
 
 div.submit {
   cursor: pointer;
-  border: 1px white solid;
+  /* border: 1px white solid; */
   border-radius: 5px;
   text-align: center;
   color: #FFF;
-  background-color: #1A1A1A;
+  background: linear-gradient(0deg, rgba(0,5,247,1) 0%, rgba(0,108,212,1) 100%);
   font-family: Calibri, sans-serif;
   font-size: 1.5em;
   padding: 5px;
@@ -101,12 +103,8 @@ div.submit {
   margin-right: 20%;
   margin-left: 20%;
   margin-bottom: 0;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in;
   width: 60%;
-}
-
-div.submit:hover {
-  background-color: darkGrey;
 }
 
 .break {
@@ -119,7 +117,7 @@ div.submit:hover {
 }
 
 .active {
-  background-color: #1A1A1A;
+  background: radial-gradient(circle, rgba(0,159,255,1) 0%, rgba(0,98,157,1) 100%);
 }
 
 span.name {
@@ -166,10 +164,46 @@ span.name {
 @media only screen and (max-width: 575px) {
 
   h1 {
-    font-size: 2.5em;
+    font-size: 1.25em;
     border-bottom: 1px #FFF solid;
     background-color: #212121;
     padding: 0.7em;
   }
 
+  ul li {
+    font-size: 2.2em;
+  }
+
+  .break {
+    font-size: 2em;
+  }
+
+  .example-code p.answer {
+    font-size: 1em;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  input.input {
+    font-size: 1em;
+    width: 85%;
+  }
+
+  ul li {
+    font-size: 2em;
+  }
+
+  .break {
+    font-size: 1.8em;
+  }
+
+  button.toggleExamples {
+    font-size: 0.7em;
+  }
+
+  .example-code p.answer {
+    font-size: 0.8em;
+    margin: 0;
+  }
 }
