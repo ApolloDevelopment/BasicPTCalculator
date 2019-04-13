@@ -1,2 +1,16 @@
-Open index.html and run DevTools (right click and then inspect). Look at the top tabs and go to the
-tab "Console". This is where everything will be logged (i.e. function usage, answers, etc.)
+ ------------------------------------------
+|                                          |
+|             DISCLAIMER                   |
+|                                          |
+ ------------------------------------------
+
+To ALL Faculty/Staff (especially teachers), the following applies to you:
+
+This site/tool is for educational purposes only, and is not intended to be used for cheating or
+inappropriate use by any student/person that chooses to use it. I am not responsible for
+anyone who chooses to use this site in an unrightful manner. I am STRICTLY the developer.
+I do not condone cheating or inappropriate use by anyone. I shall not be held liable for the
+choices made by any user. 
+
+Sincerely, 
+   Dalton Hatter - BEHS/Junior - Class of 2020
