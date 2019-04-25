@@ -8,8 +8,8 @@
   </head>
   <link rel="shortcut icon" href="triangle.png">
   <body>
-    <h1>This is a simple Geometry cheat/helper developed entirely by <span class="name">Dalton Hatter<span></h1>
-    <p class="red-text">For instructions, click <a href="INSTRUCTIONS.txt">Here</a></p>
+    <h1>Practical Mathematical Calculator ~ Developed entirely by <span class="name">Dalton Hatter<span></h1>
+    <p class="red-text">For help, click <a href="INSTRUCTIONS.txt">Here</a></p>
     <p class="red-text">For JavaScript source, click <a href="js/functions.js">Here</a></p>
     <ul>
       <li><strong>Find Hypotenuse</strong><br /><span class="description">Input the value of the A and B legs to get the length of leg C.</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
@@ -37,6 +37,21 @@
       <li><strong>Trigonometry</strong><br /><span class="description">Solves for 'x' input value using trig. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br /><br />
         <div class="example-code"> —Solve— <br />
         <form autocomplete="off" class="solve"><input class="input" type="text" placeholder="Theta" id="Trig_theta"></br /><input class="input" type="text" placeholder="Other Angle" id="Trig_ang2"><br /><input class="input" type="text" placeholder="Opposite" id="Trig_opp"><br /><input class="input" type="text" placeholder="Adjacent" id="Trig_adj"><br /><input class="input" type="text" placeholder="Hypotenuse" id="Trig_hyp"><br /><div class="submit" onclick="Trig()">Solve</div><br /><p class="answer" id="Trig-answer"></p></form></div></li>
+
+        <li>
+          <strong>Radian/Degree Converter</strong>
+          <br /><span class="description">Fill in the fields for a simple radian/degree conversion. <strong>Leave the bottom input blank if you are converting TO Radians</strong></span><br />
+          <button class="toggleExamples">Show / Hide</button>
+          <br /><br />
+          <div class="example-code"> —Solve— <br />
+            <form autocomplete="off" class="solve">
+              <input class="input" type="number" placeholder="Numerator/Degrees" id="rad-convert-numerator"></br />
+              <input class="input" type="number" placeholder="Denominator" id="rad-convert-denominator"><br />
+              <div class="submit" onclick="ui_convert()">Solve</div><br />
+              <p class="answer" id="rad-convert-answer"></p>
+            </form>
+          </div>
+        </li>
 
       <!-- <li><strong>Solving a Trapezoid</strong><br /><span class="description">Solves for 'x' input value using area formulas. Great for geomery homework :)</span><br /><button class="toggleExamples">Show / Hide</button><br />
         <div class="example-code"> —Example— <br />

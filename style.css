@@ -7,10 +7,17 @@
 body {
   /* background-color: #2b2b2b; */
   background: linear-gradient(70deg, rgba(10,210,238,1) 0%, rgba(2,97,179,1) 100%);
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 1.25em;
+  border-bottom: 1px #FFF solid;
+  background-color: #212121;
+  padding: 0.7em;
+  text-align: center;
+  text-shadow: 1px 1px 1px #212121;
+  margin-bottom: 25px;
 }
 
 p {
@@ -30,12 +37,11 @@ h1, ul {
   text-align: center;
   color: #f4f4f4;
   text-shadow: 1px 1px 1px #212121;
-  font-family: Arial, sans-serif;
   list-style: none;
 }
 
-h1 {
-  color: #f4f4f4;
+.red-text {
+  font-family: 'Times New Roman', serif;
 }
 
 ul li {
@@ -161,7 +167,7 @@ span.name {
 
 
 /* start of responsive design for use on mobile devices (mainly phones) */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 862px) {
 
   h1 {
     font-size: 1.25em;

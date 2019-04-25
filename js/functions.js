@@ -132,6 +132,85 @@ function Trig(theta, ang2, opp, adj, hyp) {
   }
 }
 
+// this stuff was added almost a year later
+
+
+
+/*
+  NOTES:
+   - when converting to radians, divide by Math.PI to get the radian number before the PI symbol, then
+     just append the pi symbol to the answer
+   - PI: "π"
+*/
+function convert(value, to, denom){
+  //radians
+  if(to.toLowerCase() == 'rad'){
+    let solution = value * (Math.PI/180) / Math.PI;
+    let i = 1;
+    if(!Number.isInteger(solution)){
+      while(true){
+        i++;
+        if(Number.isInteger(solution*i)){ break; } // found LCD
+        if(i > 180){ break; } // no LCD
+      }
+    }
+    return (i > 180) ? value+"π/180 rad" : solution*i+"π/"+i+" rad"; //returns the multiplied value as the numerator with the simplified denominator
+    //degrees
+  } else if(to.toLowerCase() == 'deg'){
+    if(denom == null || denom == undefined){
+      denom = 1;
+    }
+    let solution = (value/denom) * (180/Math.PI) * Math.PI;
+    return solution+"°";
+  } else {
+    return 'Invalid conversion unit. Unit must either be "rad" or "deg"';
+  }
+}
+
+
+
+function range(str, start, stop){
+  let output = "";
+  if(stop == undefined){
+    stop = str.length - 1;
+  }
+  for(let i = start-1; i < stop-start + 1; i++){
+    if(i < 0){return "The range must be from 1 to the index of the last letter"; break;}
+    output += str[i];
+  }
+  return output;
+}
+
+
+
+
+//--------------------------------//
+//       Begin UI Functions       //
+//-------------------------------//
+
+function ui_convert() {
+  let numerator = document.getElementById('rad-convert-numerator').value;
+  let denominator = document.getElementById('rad-convert-denominator').value;
+  let answer_text = document.getElementById('rad-convert-answer');
+  if(numerator == ""){
+    answer_text.innerHTML = "Please fill out at LEAST the top field";
+  } else if(typeof Number(numerator) === NaN || !Number.isInteger(Number(numerator))) {
+    answer_text.innerHTML = "The numerator MUST be a whole number";
+  } else if(denominator == ""){
+    answer_text.innerHTML = convert(numerator, 'rad');
+  } else if(typeof Number(denominator) === NaN || !Number.isInteger(Number(denominator))) {
+    answer_text.innerHTML = "The denominator MUST be a whole number";
+  } else {
+    answer_text.innerHTML = convert(Number(numerator), 'deg', Number(denominator));
+  }
+}
+
+/////////////////////////////////////////
+
+
+
+//different shapes
+
 function Trapezoid(a, b1, b2, h) {
   var ans;
   if(a == 'x') {
